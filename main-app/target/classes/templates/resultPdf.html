@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:background="${watermarkUrl}">
+
+    <style>
+        #container {
+            position: relative;
+        }
+
+        #image {
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+<ul>
+    <div id=ques th:each="bean,iterStat : ${beans}">
+        <div id="email" align="center">
+            <p align="center" style="color:blue; font-size: 11px;">Purchased by <span
+                    th:text="${email}">Some emailId</span></p>
+        </div>
+
+        <p>Q<span th:text="${iterStat.count}"></span>.</p>
+
+        <span>
+			<div th:if="${bean.instruction}" th:utext="${bean.instruction}">Instructions</div></br>
+			<div id="container">
+ 				<img id="image" align="center" th:src="${watermarkUrl}"/>
+				<p id="text" style="z-index: 2;position: relative;" th:utext="${bean.ques}">Question</p>
+			</div>
+			</br>
+			</br>
+			<div style="z-index: 2;position: relative;">
+					<p th:each="opt: ${bean.options}" id="text2" th:utext="${opt}">option</br></p>
+					<p> <span>Your Answer: </span> <span th:text="${bean.markedOpt} ? ${bean.markedOpt} : 'Not Attempted'">Marked Option</span></p> <br>
+
+			    	<p> <span>Correct Answer: </span> <span th:text="${bean.correct}">Correct Answer</span></p><br>
+
+
+			    	<p> <span>Solution</span><br> <span th:utext="${bean.sol}">Solution</span></p>
+
+			</div>
+			</span>
+    </div>
+    <br>
+</ul>
+
+</body>
+</html>

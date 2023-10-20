@@ -1,0 +1,4 @@
+in/eureka/catalogue/dto/CatalogueDto.class
+in/eureka/catalogue/controller/CatalogueController.class
+in/eureka/catalogue/service/CatalogueService.class
+in/eureka/catalogue/mapper/CatalogueMapper.class

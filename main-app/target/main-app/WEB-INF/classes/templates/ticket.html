@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add CSS and JS to Thymeleaf</title>
+    <link th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css}" rel="stylesheet" />
+</head>
+<body>
+     <div className="float-left w-100"  >
+				
+					  <div class="ticket__divider">
+						    <div class="ticket__notch"></div>
+						    <div class="ticket__notch ticket__notch--right"></div>
+						</div>
+						
+						<Form.Row >
+							<Form.Group controlId="formGridState" className="margin-top-1 align-left">
+		                    	<Form.Label>
+					                <div>	
+					                	<span className="pick-drop-text">Transaction Id: </span>
+					                	<span className="font-18 black bold">543</span>
+					                </div>
+			                 	</Form.Label>
+			                </Form.Group>
+
+			                <Form.Group controlId="formGridState" className="margin-top-1 align-right">
+		                    	<Form.Label>
+				                	<div>
+					                	<span className="pick-drop-text">Status: </span>
+					                	<span className="font-18 black bold">cool</span>
+					                </div>
+			                 	</Form.Label>
+			                </Form.Group>
+			                
+					    </Form.Row>
+					
+	           
+			    </div>
+</body>
+</html>

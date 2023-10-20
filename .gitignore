@@ -1,0 +1,50 @@
+# IDE-specific files and directories
+.idea/
+.vscode/
+*.iml
+
+# Compiled class files
+target/
+*.class
+
+# Maven-specific files
+mvnw
+mvnw.cmd
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+
+# Spring Boot generated files
+spring-boot-starter-generated/
+build/
+
+# Log files
+log/
+*.log
+
+# Application properties
+application.properties
+application.yml
+
+# Dependency lock files
+dependency-check-report.html
+dependency-check-report.xml
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+
+# Eclipse-specific files
+.settings/
+
+# NetBeans-specific files
+nb-configuration.xml
+
+# Mac-specific files
+.DS_Store
+
+# Windows-specific files
+Thumbs.db
+desktop.ini

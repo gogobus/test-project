@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.7.RELEASE</version>
+		<!--Fixes broken Maven 3 warning -->
+		<relativePath />
+	</parent>
+
+	<groupId>in.eureka</groupId>
+	<artifactId>eureka</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<name>Eureka</name>
+	<description>Eureka</description>
+	<url>https://eureka.in</url>
+
+	<modules>
+		<module>entities</module>
+		<module>catalogue</module>
+		<module>main-app</module>
+	</modules>
+
+	<prerequisites>
+		<maven>3.3.9</maven>
+	</prerequisites>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<skipTests>true</skipTests>
+		<maven.compiler.version>3.5.1</maven.compiler.version>
+	</properties>
+
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<name>Maven Repository</name>
+			<url>https://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>apache-repo</id>
+			<name>Apache Repository</name>
+			<url>https://repository.apache.org/content/repositories/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>apache-snapshots</id>
+			<name>Apache Development Snapshot Repository</name>
+			<url>https://repository.apache.org/content/repositories/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>sonatype-snapshots</id>
+			<name>Sonatype Development Snapshot Repository</name>
+			<url>https://repository.apache.org/content/repositories/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<!-- <repository> <id>artifactory</id> <name>artifactory-internal-releases</name> 
+			<url>http://devops.adda247.in:8081/artifactory/libs-release-local</url> </repository> -->
+
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>https://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+
+		<defaultGoal>clean install</defaultGoal>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

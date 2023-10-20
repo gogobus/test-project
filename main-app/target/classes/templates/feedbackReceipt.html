@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Feedback</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<style>
+		.mb-3 {
+			margin-bottom: 1.5rem;
+		}
+		
+		.mb-1 {
+			margin-bottom: .5rem;
+		}
+		
+		.orange {
+			color: #ff822e;
+		}
+		
+		.blue {
+			color: #002e5d;
+		}
+		
+		.ml-5 {
+			margin-left: 5px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="mb-3">
+		<p id="name" th:text="'Dear ' + ${cust_name} + ','"></p>
+	</div>
+	<div class="mb-1 orange">
+		<span id="welcomeMsg">Greetings from gogoBus!</span>
+	</div>
+	<div class="mb-3">
+		<p th:text="${message}"></p>
+	</div>
+	<div>Regards,</div>
+	<div>Team gogoBus</div>
+	<div>Ph: +91-9654321223</div>
+	<div>
+		<a target="_blank"
+			href="https://www.linkedin.com/company/gogobusglobal"> <img
+			src= "https://d1xp0lckhvx4vb.cloudfront.net/website/linkdn-orange.svg"
+			height="14" width="14" />
+		</a>
+	</div>
+	
+	<div class="ml-5 mb-1 blue">
+		<p th:text="'On '+ ${date} + ' '+ ${cust_name} + ' wrote:'"></p>
+		<p th:text="${feedback}"></p>
+	</div>
+
+</body>
+</html>
