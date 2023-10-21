@@ -24,7 +24,7 @@ public class CatalogueMapper {
 		
 		if(priceEntity!= null) {
 			dto.setSellingPrice(priceEntity.getSellingPrice());
-			dto.setStrikePrice(priceEntity.getSellingPrice());
+			dto.setStrikePrice(priceEntity.getStrikePrice());
 		}
 		
 		return dto;

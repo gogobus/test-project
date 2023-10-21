@@ -1,19 +1,20 @@
 package in.eureka.jpa.entity.common;
 
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import in.eureka.jpa.enums.Category;
 
 @Entity
-@Table
+@Table(name="catalogue")
 public class CatalogueEntity {
 
-	@GeneratedValue
+	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	private String name;
